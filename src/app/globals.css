@@ -2,5 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: dark; }
-html, body { background: #0b0c0f; }
+:root { 
+  color-scheme: dark; 
+}
+
+html, body { 
+  background: #0b0c0f; 
+  color: white;
+}
