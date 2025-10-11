@@ -1,24 +1,26 @@
-import { projects } from "@/data/projects";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+import Hero from "@/components/Hero";
 import Card from "@/components/Card";
+import { projects } from "@/data/projects";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-dark p-8 sm:p-12 lg:p-16">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-white mb-2">Projects</h1>
-        <p className="text-white/60 mb-12">A collection of my work</p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <Card
-              key={project.key}
-              title={project.title}
-              blurb={project.blurb}
-              badge={project.badge}
-            />
+    <main className="min-h-screen bg-dark text-white">
+      <SiteHeader />
+      <Hero />
+      <section id="projects" className="mx-auto max-w-6xl px-6 pb-16">
+        <div className="mb-6 flex items-end justify-between">
+          <h3 className="text-xl font-semibold">Projects (placeholders)</h3>
+          <span className="text-xs text-white/50">{projects.length} items</span>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((p) => (
+            <Card key={p.key} title={p.title} blurb={p.blurb} badge={p.badge} />
           ))}
         </div>
-      </div>
-    </div>
+      </section>
+      <SiteFooter />
+    </main>
   );
 }
