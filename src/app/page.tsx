@@ -16,7 +16,14 @@ export default function Page() {
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (
-            <Card key={p.key} title={p.title} blurb={p.blurb} badge={p.badge} />
+            <Card 
+              key={p.key} 
+              title={p.title} 
+              blurb={p.blurb} 
+              badge={p.badge} 
+              codeLink={p.codeLink} 
+              demoLink={p.demoLink} 
+            />
           ))}
         </div>
       </section>

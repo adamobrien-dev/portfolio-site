@@ -1,7 +1,22 @@
 // src/data/projects.ts
 
-export const projects = [
-  { key: "project1", title: "Project 1", blurb: "Placeholder project description", badge: "AI/Fintech" },
+export interface Project {
+  key: string;
+  title: string;
+  blurb: string;
+  badge: string;
+  codeLink?: string;
+  demoLink?: string;
+}
+
+export const projects: Project[] = [
+  { 
+    key: "project1", 
+    title: "AI Insight API", 
+    blurb: "FastAPI-powered AI analysis API that transforms natural language prompts into structured insights using OpenAI models", 
+    badge: "AI/DevTools",
+    codeLink: "https://github.com/adamobrien-dev/ai-insight-api"
+  },
   { key: "project2", title: "Project 2", blurb: "Placeholder project description", badge: "Consumer" },
   { key: "project3", title: "Project 3", blurb: "Placeholder project description", badge: "Social/Audio" },
   { key: "project4", title: "Project 4", blurb: "Placeholder project description", badge: "Trading" },
