@@ -33,11 +33,11 @@ export default function Card({ title, blurb, badge, codeLink, demoLink }: P) {
               rel="noopener noreferrer"
               className="rounded-md border border-white/15 px-3 py-1.5 text-sm text-white/70 hover:text-white hover:border-white/30 transition-colors"
             >
-              Watch Demo
+              Try Demo
             </a>
           ) : (
             <button disabled className="cursor-not-allowed rounded-md border border-white/15 px-3 py-1.5 text-sm text-white/70">
-              Watch Demo
+              Try Demo
             </button>
           )}
         </div>
