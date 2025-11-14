@@ -2,7 +2,9 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Hero from "@/components/Hero";
 import Card from "@/components/Card";
+import ContributionCard from "@/components/ContributionCard";
 import { projects } from "@/data/projects";
+import { contributions } from "@/data/contributions";
 
 export default function Page() {
   return (
@@ -23,6 +25,28 @@ export default function Page() {
               badge={p.badge} 
               codeLink={p.codeLink} 
               demoLink={p.demoLink} 
+            />
+          ))}
+        </div>
+      </section>
+      <section id="open-source" className="mx-auto max-w-6xl px-6 pb-16">
+        <div className="mb-6 flex items-center justify-between">
+          <div>
+            <p className="text-sm uppercase tracking-widest text-white/50">Open Source</p>
+            <h3 className="mt-1 text-xl font-semibold">Recent Contributions</h3>
+          </div>
+          <span className="text-xs text-white/50">{contributions.length} entries</span>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          {contributions.map((item) => (
+            <ContributionCard
+              key={item.key}
+              project={item.project}
+              title={item.title}
+              description={item.description}
+              status={item.status}
+              link={item.link}
+              highlights={item.highlights}
             />
           ))}
         </div>
