@@ -3,7 +3,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Hero from "@/components/Hero";
 import Card from "@/components/Card";
 import ContributionCard from "@/components/ContributionCard";
-import { projects } from "@/data/projects";
+import { commercialProjects, openSourceProjects } from "@/data/projects";
 import { contributions } from "@/data/contributions";
 
 export default function Page() {
@@ -13,18 +13,43 @@ export default function Page() {
       <Hero />
       <section id="projects" className="mx-auto max-w-6xl px-6 pb-16">
         <div className="mb-6 flex items-end justify-between">
-          <h3 className="text-xl font-semibold">Projects (placeholders)</h3>
-          <span className="text-xs text-white/50">{projects.length} items</span>
+          <div>
+            <p className="text-sm uppercase tracking-widest text-white/50">Open Source</p>
+            <h3 className="text-xl font-semibold">Independent Products</h3>
+          </div>
+          <span className="text-xs text-white/50">{openSourceProjects.length} items</span>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p) => (
-            <Card 
-              key={p.key} 
-              title={p.title} 
-              blurb={p.blurb} 
-              badge={p.badge} 
-              codeLink={p.codeLink} 
-              demoLink={p.demoLink} 
+          {openSourceProjects.map((p) => (
+            <Card
+              key={p.key}
+              title={p.title}
+              blurb={p.blurb}
+              badge={p.badge}
+              codeLink={p.codeLink}
+              demoLink={p.demoLink}
+              status={p.status}
+            />
+          ))}
+        </div>
+      </section>
+      <section id="products" className="mx-auto max-w-6xl px-6 pb-16">
+        <div className="mb-6 flex items-end justify-between">
+          <div>
+            <p className="text-sm uppercase tracking-widest text-white/50">Real-World Launches</p>
+            <h3 className="text-xl font-semibold">Commercial Products</h3>
+          </div>
+          <span className="text-xs text-white/50">{commercialProjects.length} items</span>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {commercialProjects.map((p) => (
+            <Card
+              key={p.key}
+              title={p.title}
+              blurb={p.blurb}
+              badge={p.badge}
+              siteLink={p.siteLink}
+              status={p.status}
             />
           ))}
         </div>
