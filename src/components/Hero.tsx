@@ -16,7 +16,8 @@ export default function Hero() {
       <div>
         <h2 className="text-2xl md:text-3xl font-semibold">Building useful AI products.</h2>
         <p className="mt-2 max-w-prose text-white/70">
-          This portfolio is a work-in-progress. Live code and demos will replace placeholders as each project ships.
+          Full-stack engineer and founder building AI-driven products across trading, mobile apps, and developer tools I 
+          handle everything from product design and frontend to backend, cloud, and AI systems.
         </p>
         <div className="mt-4 flex gap-3">
           <a href="#projects" className="rounded-lg bg-white text-black px-4 py-2 text-sm font-medium">Explore Projects</a>
