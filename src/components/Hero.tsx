@@ -19,6 +19,9 @@ export default function Hero() {
           Full-stack engineer and founder building AI-driven products across trading, mobile apps, and developer tools I 
           handle everything from product design and frontend to backend, cloud, and AI systems.
         </p>
+        <p className="mt-3 text-white/60">
+          Focused on fast iteration, clean UX, and AI-powered systems.
+        </p>
         <div className="mt-4 flex gap-3">
           <a href="#projects" className="rounded-lg bg-white text-black px-4 py-2 text-sm font-medium">Explore Projects</a>
           <button disabled className="rounded-lg border border-white/15 px-4 py-2 text-sm text-white/70 cursor-not-allowed">Download Resume</button>

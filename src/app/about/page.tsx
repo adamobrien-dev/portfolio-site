@@ -6,7 +6,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-dark text-white">
       <SiteHeader />
-      <section className="mx-auto max-w-4xl px-6 py-16">
+      <section className="mx-auto max-w-4xl px-6 pt-8 pb-16">
         <div className="mb-12 text-center">
           <p className="text-sm uppercase tracking-widest text-white/50">About Me</p>
           <h2 className="mt-4 text-4xl font-bold md:text-5xl">Adam O&apos;Brien</h2>
